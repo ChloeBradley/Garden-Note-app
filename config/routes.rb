@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   get 'sign-up', to: 'registrations#new'
   post 'sign-up', to: 'registrations#create'
   get 'sign-in', to: 'authentication#new'
-  
+
+resources :user do
+  resources :gardens
+  end
 end
