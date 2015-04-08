@@ -1,6 +1,7 @@
-user garden show page
 
-<% @garden.each do |plant| %>
 
-<%= plant.plant_type %>
-<%= plant.note %>
+<%= link_to "Sign Out", sign_out_path(current_user) %>
+
+
+<%= @garden.season_name %>
+<%= @garden.plant_type %>

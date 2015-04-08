@@ -8,7 +8,7 @@ class RegistrationsController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Thanks for signing up!"
-      redirect_to user_gardens_path(@user)
+      redirect_to user_gardens_path
     else
       render :new
     end

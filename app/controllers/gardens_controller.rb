@@ -2,7 +2,7 @@ class GardensController < ApplicationController
 before_action :current_user
 
   def index
-    @gardens = Garden.all
+    @gardens = current_user.gardens
   end
 
   def show
