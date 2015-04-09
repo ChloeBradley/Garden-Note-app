@@ -5,9 +5,10 @@
     </ul>
 </div>
 
+
 <% @gardens.each do |garden| %>
   <div class="row top-buffer">
-    <div class="col-md-4 well">
+    <div class="well col-md-4">
       <div class="col-md-4 col-md-offset-4">
         <%= link_to garden.season_name, user_garden_path(current_user, garden) %>
       </div>

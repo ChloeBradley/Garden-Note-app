@@ -12,6 +12,100 @@
  *
  *= require_self
  */
+ @import url(http://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans);
+
+body {
+  background-color: #F8F8F8;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+.comments{
+  padding:20px;
+}
+
+.comments article.comment {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.comments article.comment .meta{
+  height: 60px;
+  margin-bottom: 17px;
+  position: relative;
+}
+
+.comments article.comment .meta img.avatar {
+  position: absolute;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+}
+
+.comments article.comment .meta a.author,
+.comments article.comment .meta a.date {
+  text-decoration: none;
+  position: absolute;
+}
+
+.comments article.comment .meta a.author {
+  color: inherit;
+  left: 73px;
+  line-height: 29px;
+  padding: 0px 7px;
+  top: 3px;
+}
+
+.comments article.comment .meta a.date {
+  font-size: 14px;
+  line-height: 19px;
+  color: #666666;
+  left: 80px;
+  top: 35px;
+}
+
+.comments article.comment .content {
+  background-color: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  padding: 22px 25px;
+  position: relative;
+}
+
+.comments article.comment .content:after,
+.comments article.comment .content:before {
+	bottom: 100%;
+	left: 30px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.comments article.comment .content:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 12px;
+	margin-left: -12px;
+}
+.comments article.comment .content:before {
+	border-color: rgba(245, 47, 47, 0);
+	border-bottom-color: #DADADA;
+	border-width: 13px;
+	margin-left: -13px;
+}
+
  @import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
 
  .detailBox {
@@ -84,10 +178,10 @@
  /*Welcome page styles*/
 
  .header.navbar-fixed-top {
-  background-color: #885151;
-  text-align: center;
-  color: bisque;
-  font-family: fantasy;
+   background-color: #FAFFEF;
+    text-align: center;
+    color: rgb(83, 169, 83);
+    font-family: fantasy;
 }
 
 ul.nav.navbar-nav.pull-right {
@@ -109,7 +203,7 @@ body {
   margin: 0 auto;
   width: 56%;
   border: 1px solid lightgrey;
-  background-color: whitesmoke;
+  background-color:#A39598;
   box-shadow: 0px 0px 45px rgb(52, 26, 34);
   padding: 0px 43px;
   margin-top: 79px;
@@ -138,10 +232,14 @@ body {
 }
 .well {
   margin-left: 29%;
-  background-color: #B7E8B9;
+  background-color: #53a953;
 }
 
 .top-buffer {
   margin-top:75px;
   margin-bottom: -55px;
   }
+
+.potentional-color-for-garden-index {
+  background-color: #C7C564;
+}
