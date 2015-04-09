@@ -8,6 +8,5 @@ before_action :current_user
   def show
     @garden = Garden.find(params[:id])
     @note = Note.new
-    @notes = @garden.notes
   end
 end

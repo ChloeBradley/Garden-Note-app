@@ -5,28 +5,20 @@ class NotesController < ApplicationController
   end
 
   def create
-      @note = @garden.notes.new(note_params)
-      @note.user_id = current_user.id
-      if @note.save
-        redirect_to graden_note_path(@garden[:garden_id], @note[:id])
-      else
-        redirect_to garden_note_path(@garden[:garden_id], @note[:id])
-      end
-    end
-   end
+    @note = @garden.notes.new(note_params)
+    @note.save
+    redirect_to user_garden_path(@garden, @garden[:id])
+  end
 end
+
 
 
 private
 
-def comment_params
-  params.require(:comment).permit(:text, :user_id, :task_id)
-end
+  def note_params
+    params.require(:note).permit(:title, :note, :date, :garden_id)
+  end
 
- def find_user
-   @user = User.find(current_user)
- end
-
-
-
-end
+   def find_user
+     @user = User.find(current_user)
+   end

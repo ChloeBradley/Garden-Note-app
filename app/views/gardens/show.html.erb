@@ -11,13 +11,22 @@
         <tr>
           <head><h3>Notes</h3></head>
             <td>
-              <center><h3><%= @garden.season_name %><h3></center>
-                <%= @garden.plant_type %>
+            <% @garden.notes.each do |note| %>
             </td>
-        </tr>
+         </tr>
       </div>
     </div>
 </div>
+
+
+
+      <div class='container'>
+        <div class="col-md-9 text-custom">
+          <%= note.note %>
+        </div>
+      </div>
+
+  <% end %>
 
 
     <%= form_for [@garden, @note], url: user_garden_notes_path(current_user, @garden) do |f| %>
