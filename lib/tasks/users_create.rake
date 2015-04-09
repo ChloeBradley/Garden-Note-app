@@ -16,7 +16,7 @@ desc 'Refreshes the user table with 50 new users'
     season_array = ['Spring 2010', 'Summer 29837', 'Winter 2015', 'Fall 2345']
     plant_type_array = ['vegetable', 'herb', 'flowers', 'fruits']
 
-    20.times do |garden|
+    400.times do |garden|
       Garden.create!(season_name: season_array.sample, plant_type: plant_type_array.sample, user_id: user_id_array.sample)
     end
     puts "#{Garden.count} gardens created"
