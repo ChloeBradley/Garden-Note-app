@@ -1,5 +1,5 @@
 <div class="header navbar-fixed-top">
-   <h3><%="#{current_user.first_name}!" %></h3>
+   <h3><%="#{current_user.first_name}'s garden notes" %></h3>
     <ul class="nav navbar-nav pull-right">
      <li><%= link_to "Sign Out", sign_out_path %></li>
     </ul>
@@ -9,7 +9,6 @@
     <div class="row top-buffer">
       <div class="col-md-8">
         <tr>
-          <head><h3>Notes</h3></head>
             <td>
             <% @garden.notes.each do |note| %>
             </td>
@@ -19,22 +18,24 @@
 </div>
 
 
-
+    <div class="notesCenter">
       <div class='container'>
-        <div class="col-md-9 text-custom">
+        <div class="col-md-12 text-custom">
           <%= note.note %>
         </div>
       </div>
 
   <% end %>
 
+    </div> <!--Close notesCenter div-->
 
+    <div class="notesSubmit">
     <%= form_for [@garden, @note], url: user_garden_notes_path(current_user, @garden) do |f| %>
     <p>
-      <div class="col-md-9 pull-right">
+      <div class="col-md-12">
         <%= f.text_area :note, class: "form-control" %><br>
           </p>
             <%= f.submit "Add Note", class: "btn btn-primary" %>
-              </div>
-
+      </div>
             <% end %>
+    </div> <!--Close notesSubmit div-->

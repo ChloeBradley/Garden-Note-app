@@ -5,6 +5,9 @@ before_action :current_user
     @gardens = current_user.gardens
   end
 
+  def create
+  end
+
   def show
     @garden = Garden.find(params[:id])
     @note = Note.new

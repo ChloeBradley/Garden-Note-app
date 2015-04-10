@@ -1,19 +1,21 @@
-registrations new page
 
 <%=  form_for @user, url: sign_up_path do |f| %>
+<div class="body1">
+<h1 class="signUp1">New to Zukini Notes?</h1>
+   <div class="SignUpContainer">
+      <h3 class="signUp3">Lets get you signed up <span class="bold">Here:</span></h3>
+          <%=  f.text_field :first_name, class: "form-field", placeholder: "First name" %>
+        </input>
+          <%=  f.text_field :last_name, class: "form-field", placeholder: "Last name" %>
+        </input>
+          <%= f.email_field :email, class: "form-field", placeholder: "Email" %>
+        </input>
+          <%= f.password_field :password, class: "form-field", placeholder: "Password" %>
+        </input>
 
-<%=  f.label :first_name %>
-<%=  f.text_field :first_name %>
-
-<%= f.label :last_name %>
-<%= f.text_field :last_name %>
-
-<%= f.label :email %>
-<%= f.email_field :email %>
-
-<%= f.label :password %>
-<%= f.password_field :password %>
-
-<%= f.submit "Sign Up!" %>
-
+        <p><strong><a By creating an account, I accept The Zukinis> </a> <a href="#">Terms of Service</a>  <a href="#">Privacy Policy.</a></strong></p>
+        <%= f.submit "Sign Up!", class: "signUpP", class: "btn btn-danger" %>
+      </input>
+    </div>
+    </div>
 <% end %>

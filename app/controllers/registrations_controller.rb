@@ -7,8 +7,8 @@ class RegistrationsController < ApplicationController
     @user = User.new(params.require(:user).permit(:email, :password))
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Thanks for signing up!"
-      redirect_to user_gardens_path
+      flash[:success] = "Thanks for signing up!"
+      redirect_to root_path
     else
       render :new
     end

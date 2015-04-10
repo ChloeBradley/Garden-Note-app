@@ -2,6 +2,7 @@
    <h3><%="Welcome back, #{current_user.first_name}! Everything is just how you left it." %></h3>
     <ul class="nav navbar-nav pull-right">
      <li><%= link_to "Sign Out", sign_out_path %></li>
+     <li><%= link_to "New Digs", new_user_garden_path %></li>
     </ul>
 </div>
 
@@ -15,3 +16,7 @@
     </div>
   </div>
 <% end %>
+
+
+
+<%= link_to "New Digs" %>
