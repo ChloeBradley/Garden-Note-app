@@ -7,7 +7,7 @@ desc 'Refreshes the user table with 50 new users'
     Garden.destroy_all
     Note.destroy_all
 
-    100.times do |user|
+    30.times do |user|
       User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email, password: "password")
     end
     puts "#{User.count} users created"
@@ -16,7 +16,7 @@ desc 'Refreshes the user table with 50 new users'
     season_array = ['Indoor Herb Garden 2014', 'Summer Vegetable Garden 2012', 'Winter Green House Experiment 2015', 'Fall Mulching 2013', 'Lasagna Garden Ideas 2016', 'Garden Ideas']
     plant_type_array = ['vegetable', 'herb', 'flowers', 'fruits']
 
-    40000.times do |garden|
+    400.times do |garden|
       Garden.create!(season_name: season_array.sample, plant_type: plant_type_array.sample, user_id: user_id_array.sample)
     end
     puts "#{Garden.count} gardens created"
